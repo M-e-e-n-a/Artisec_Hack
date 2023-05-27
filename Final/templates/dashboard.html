@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% block body %}
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color:cornsilk;
+        }
+        
+        h1,h2,h3 {
+            color: firebrick;
+            
+        }
+h1{
+
+border: 5px solid firebrick;
+padding-top: 25px;
+  padding-right: 100px;
+  padding-bottom: 25px;
+  padding-left: 100px;
+ font-family: "Times New Roman", Times, serif;
+}
+            
+        form {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4287f5;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        table {
+            
+            color: firebrick;
+            font-size: 18px;
+            border: 1px double firebrick;
+            
+        }
+        th,td{
+padding:50px;
+ border: 1px double firebrick;
+}
+
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Device Management</h1>
+
+    <!-- Link a device button -->
+    <form action="/add_device">
+        <a href='/add_device'><button type="submit">Link a Device</button></a>
+    </form>
+
+    <h2>Your Connected Devices</h2>
+    
+    <!-- Display connected devices -->
+    <table class="table">
+<tr>
+<th colspan="3">Connected devices</th>
+<thead>
+    <tr>
+      <th scope="col">Serial No</th>
+      <th scope="col">Device IP</th>
+      <th scope="col">Last Expiry</th>
+    </tr>
+  </thead>
+</tr>
+{% if dev1|length != 0 %}
+<tr>
+    <tr>
+        <th scope="row">1</th>
+        <td>{{dev1[0]}}</td>
+        <td>{{dev1[2]}}</td>
+    </tr>
+{% endif %}
+{% if dev1|length == 0 %}
+<tr>
+    <th scope ="row">1.</th>
+    <td>No device added</td>
+    <td>NA</td>
+    </tr>
+{% endif %}
+
+{% if dev2|length != 0 %}
+<tr>
+<th scope = "row">2.</th>
+<td>{{dev2[0]}}</td>
+<td>{{dev2[2]}}</td>
+</tr>
+{% endif %}
+</table>
+
+{% endblock body %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="text-center">
+    <p></p>
+    <p></p>
+    <br> 
+    <br>
+    <p></p>
+    <div class="alert alert-dark" role="alert"><stronig>
+       Successfully added {{ip}}!</strong>
+       <br> Device count : {{count}}
+      </div>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+    <div class="d-grid gap-2">
+        <a href='/add_other'><button class="btn btn-dark col-6 mx-auto" type="button">Add Another device</button></a>
+        <p></p>
+        <a href='/'><button class="btn btn-dark col-6 mx-auto" type="button">Add Devices Later</button></a>
+        <p></p>
+    </div>
+{% endblock body %}

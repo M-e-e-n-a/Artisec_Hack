@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="text-center">
+    <p></p>
+    <p></p>
+    <br> Scan the below QR code with the mobile device to get the access to the internet
+    <br>
+    <p></p>
+    <img src="{{ url_for('static', filename='qrcode.png') }}" alt="QR Code" width="350" height="350">
+    <div class="d-grid gap-2">
+        <a href='/add_other'><button class="btn btn-dark col-6 mx-auto" type="button">Add Another device</button></a>
+        <p></p>
+        <a href='/'><button class="btn btn-dark col-6 mx-auto" type="button">Add Devices Later</button></a>
+        <p></p>
+    </div>
+{% endblock body %}

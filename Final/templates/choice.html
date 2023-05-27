@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="alert alert-success" role="alert">
+    Cuurent devices added: {{ 2 - allowed }}
+</div>
+<div class="text-center">
+    <p></p>
+    <p></p>
+    <p></p>
+    <div class="d-grid gap-2">
+        <a href='/add_mobile'><button class="btn btn-dark col-6 mx-auto" type="button">Add Mobile</button></a>
+        <p></p>
+        <a href='/add_laptop'><button class="btn btn-dark col-6 mx-auto" type="button">Add Laptop</button></a>
+        <p></p>
+        <a href='/'><button class="btn btn-dark col-6 mx-auto" type="button">Add Devices Later</button></a>
+        <p></p>
+    </div>
+{% endblock body %}

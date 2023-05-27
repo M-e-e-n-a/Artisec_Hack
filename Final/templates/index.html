@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="alert alert-success" role="alert">
+    Authentication successful!
+</div>
+<div class="text-center">
+<p></p>
+<p></p>
+<p>
+    <br> You can add maximum of two devices to the WiFi
+    <br>
+    <br>
+    <br>
+</p>
+<div class="d-grid gap-2">
+    <a href='/add_this'><button class="btn btn-dark col-6 mx-auto" type="button">Add this Device</button></a>
+    <p></p>
+    <a href='/add_other/2'><button class="btn btn-dark col-6 mx-auto" type="button">Add Other device</button></a>
+    <p></p>
+    <a href='/'><button class="btn btn-dark col-6 mx-auto" type="button">Exit</button></a>
+</div>
+
+<p></p>
+<p></p>
+<br><br> For any issues contact the IT admin. For clarifications message on +91-9998889998.
+</div>
+{% endblock body %}

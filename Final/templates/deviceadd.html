@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="alert alert-success" role="alert">
+    Current device is added successfully!
+    IP address: {{ ip }}
+</div>
+<div class="text-center">
+    <p></p>
+    <p></p>
+    <p>
+        <br> You can add maximum of two devices to the WiFi
+        <br>
+        <br>
+        <br>
+    </p>
+    <div class="d-grid gap-2">
+        <a href='/add_other'><button class="btn btn-dark col-6 mx-auto" type="button">Add another device</button></a>
+        <p></p>
+        <a href='/'><button class="btn btn-dark col-6 mx-auto" type="button">Exit</button></a>
+    </div>
+{% endblock body %}
